@@ -7,7 +7,7 @@
 
 // Walk-through
 
-var members = ["Name Here", "Name Here"]
+var members = ["Thomas Hott", "Edward CHilders"]
 
 // ************************************************
 
@@ -20,12 +20,28 @@ var members = ["Name Here", "Name Here"]
 */
 
 function reverseString(str) {
-  // code here
+  var new_str = ""
+  for (var i = str.length - 1; i >= 0; i--) {
+    reverseStringTestCase += str[i]
+  }
+  return reverseStringTestCase
 }
 
 var reverseStringTestCase = "abc"
 var reverseStringReturnValue = reverseString(reverseStringTestCase)
 console.log(reverseStringReturnValue) // 'cba'
+
+/*python code
+
+
+def reverseString(str):
+  return str[::-1]
+
+txt = reverseString("abc")
+
+print(txt)
+
+*/
 
 // ************************************************
 /*
@@ -44,7 +60,17 @@ console.log(reverseStringReturnValue) // 'cba'
 */
 
 function stringAcronym(str) {
-  // code here
+  var string = true
+  var result = ""
+  for (var i = 0; i < str.length; i++) {
+    if (str[i == ""]) {
+      string = true
+    } else if (string) {
+      result += str[i].toUpperCase()
+      string = false
+    }
+  }
+  return result
 }
 
 var stringAcronymTestCase = "The quick brown fox, jumped over the lazy dog."

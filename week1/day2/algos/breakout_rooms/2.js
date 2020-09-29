@@ -7,7 +7,13 @@
 
 // Walk-through
 
-var members = ["Name Here", "Name Here"]
+var members = [
+  "Steven Wittkopf",
+  "Kyle Howell",
+  "Stephen Lebel",
+  "Adam Humecky",
+  "Sean Sarreal",
+]
 
 // ************************************************
 
@@ -20,7 +26,11 @@ var members = ["Name Here", "Name Here"]
 */
 
 function reverseString(str) {
-  // code here
+  let output = ""
+  for (let i = str.length - 1; i >= 0; i--) {
+    output += str[i]
+  }
+  return output
 }
 
 var reverseStringTestCase = "abc"
@@ -44,7 +54,20 @@ console.log(reverseStringReturnValue) // 'cba'
 */
 
 function stringAcronym(str) {
-  // code here
+  let newWord, result
+  newWord = true
+  result = ""
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == " ") {
+      newWord = true
+    } else if (newWord) {
+      result += str[i].toUpperCase()
+      newWord = false
+    }
+  }
+
+  return result
 }
 
 var stringAcronymTestCase = "The quick brown fox, jumped over the lazy dog."
@@ -62,7 +85,7 @@ console.log(stringAcronymReturnValue) // 'TQBFJOTLD'
 */
 
 function caseInsensitiveCompare(str1, str2) {
-  // code here
+  return str1.toUpperCase() == str2.toUpperCase()
 }
 
 var caseInsensitiveCompareTestCaseA = "ABC"

@@ -7,7 +7,7 @@
 
 // Walk-through
 
-var members = ["Name Here", "Name Here"]
+var members = ["Donna", "Vikram", "Zach", "Ali", "Ling"]
 
 // ************************************************
 
@@ -20,7 +20,20 @@ var members = ["Name Here", "Name Here"]
 */
 
 function reverseString(str) {
-  // code here
+  // set up
+  var newString = ""
+
+  // do some repetative work
+  //        start,             stop,  step
+  // for (var i = 0; i < str.length; i++) {
+  //          2                 2>= 0   -
+  for (var i = str.length - 1; i >= 0; i--) {
+    newString += str[i]
+    // newString = newString + str[i]
+  }
+
+  // clean up or return
+  return newString
 }
 
 var reverseStringTestCase = "abc"
@@ -44,7 +57,9 @@ console.log(reverseStringReturnValue) // 'cba'
 */
 
 function stringAcronym(str) {
-  // code here
+array=str.split(" ");
+arr=[]
+for(var i=0; i <= array.length; )
 }
 
 var stringAcronymTestCase = "The quick brown fox, jumped over the lazy dog."
@@ -61,7 +76,7 @@ console.log(stringAcronymReturnValue) // 'TQBFJOTLD'
   caseInsensitiveCompare(test1StrA, test1StrB) // Output: true
 */
 
-function caseInsensitiveCompare(str1, str2) {
+functio()n caseInsensitiveCompare(str1, str2) {
   // code here
 }
 

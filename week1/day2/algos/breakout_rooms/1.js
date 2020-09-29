@@ -4,10 +4,8 @@
 // Input
 // Output
 // Test
-
 // Walk-through
-
-var members = ["Name Here", "Name Here"]
+var members = ["Jason", "Jake", "Paul"]
 
 // ************************************************
 
@@ -20,7 +18,7 @@ var members = ["Name Here", "Name Here"]
 */
 
 function reverseString(str) {
-  // code here
+  varnewStr = []
 }
 
 var reverseStringTestCase = "abc"
