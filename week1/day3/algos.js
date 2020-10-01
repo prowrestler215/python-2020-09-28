@@ -5,10 +5,6 @@
   Default the separator to a comma with a space after it if no separator is provided
 */
 
-// var arr1 = [1, 2, 3]
-// var separator1 = ", "
-// var expected1 = "1, 2, 3"
-
 // var arr2 = [1, 2, 3]
 // var separator2 = "-"
 // var expected2 = "1-2-3"
@@ -25,10 +21,31 @@
 // var separator5 = ", "
 // var expected5 = ""
 
+var arr1 = [1, 2, 3]
+var separator1 = ", "
+var expected1 = "1, 2, 3"
+
 function join(arr, separator) {
-  // code here
+  console.log(arr, separator)
+  // set up
+  var newString = ""
+  // create a for loop
+  for (var i = 0; i < arr.length - 1; i++) {
+    // read each value in the array
+    // add each value to the new string
+    // with separator between each value
+    newString += arr[i] + separator
+    // newString = newString + arr[i] + separator
+  }
+
+  newString += arr[arr.length - 1]
+
+  console.log(newString)
+  // return new string
+  return newString
 }
 
+join(arr1, separator1)
 /* ******************************************************************************** */
 
 /*
