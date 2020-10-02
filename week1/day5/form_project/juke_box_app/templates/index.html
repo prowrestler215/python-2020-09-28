@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Django JukezZz!</h1>
+    <div>
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.t1otGTtGG4YysLyPEHLrnQHaHY%26pid%3DApi&f=1"
+        alt="Juke Box"
+      />
+    </div>
+    <form action="/records" method="get">
+      {% csrf_token %}
+      <h2>Post a song!</h2>
+      <p>Song Title: <input type="text" name="song_title" /></p>
+      <p>Album Image Url: <input type="text" name="album_url" /></p>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
