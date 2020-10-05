@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <p>{{ request.session.counter }} times.</p>
+
+    {% if request.session.counter == 5 %}
+    <p class="low">The counter is 5!!!!</p>
+    {% endif %}
+    <hr />
+    {% if request.session.counter == 10 %}
+    <p class="high">The counter is 10!!!!</p>
+    {% endif %}
+
+    <form action="/something" method="post">
+      {% csrf_token%}
+      <p>Something <input type="text" name="something" /></p>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
